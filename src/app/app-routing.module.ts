@@ -5,7 +5,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-{path: 'usuarios',component: UsuariosComponent}
+{path: 'usuarios',component: UsuariosComponent},
 {path: '**', component: AppComponent}
 ];
 
