@@ -9,11 +9,11 @@ import { Fotos } from '../../interfaces/fotos-intercace';
 })
 export class PhotosComponent implements OnInit{
   fotos: Fotos[];
-  Fotos: any;
   
 
   constructor(private servicioPruebaServicio: ServicioPruebaService) { 
- }
+    
+  }
   
   ngOnInit(): void {
     this.Fotos();
@@ -22,10 +22,10 @@ export class PhotosComponent implements OnInit{
   }
 
 
-  Albums(){
-  this.servicioPruebaServicio.getAlbums().subscribe(Fotos=> {
+  Fotos(){
+  this.servicioPruebaServicio.getFotos().subscribe(Fotos=> {
   console.log(Fotos);
-  this.fotos = Fotos as Fotos[]
+  this.fotos = Fotos as unknown as Fotos[]
   });
 }
 

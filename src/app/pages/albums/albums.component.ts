@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from 'src/app/interfaces/albums-interface';
 import { ServicioPruebaService } from '../../services/servicio-prueba.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-albums',
@@ -10,6 +10,9 @@ import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 })
 export class AlbumsComponent implements OnInit{
   albums: Album[];
+  router: any;
+  navigate: any;
+
 
   constructor(private servicioPruebaServicio: ServicioPruebaService) { 
     
@@ -18,15 +21,17 @@ export class AlbumsComponent implements OnInit{
   ngOnInit(): void {
     this.Albums();
 
-  // console.log(this.albums);
+   console.log(this.albums);
   }
 
 
   Albums(){
   this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
-  //console.log(albums);
-  this.albums = albums as Album[]
+  console.log(albums);
+  this.albums = albums as unknown as Album[]
   });
 }
+
+
 
 }

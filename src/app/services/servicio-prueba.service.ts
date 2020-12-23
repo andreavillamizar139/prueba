@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Albums } from '../interfaces/albums-interface';
+import { Album } from '../interfaces/albums-interface';
 import { Fotos } from '../interfaces/fotos-intercace';
 import { Publicaciones } from '../interfaces/publicaciones-interface';
 import { Usuarios } from '../interfaces/usuarios-interface';
@@ -18,8 +18,8 @@ export class ServicioPruebaService {
     return this.http.get<Usuarios>('https://jsonplaceholder.typicode.com/users');
   }
 
-  getAlbums():Observable<Albums>{
-    return this.http.get<Albums>('https://jsonplaceholder.typicode.com/albums');
+  getAlbums():Observable<Album>{
+    return this.http.get<Album>('https://jsonplaceholder.typicode.com/albums');
   }
 
   getFotos():Observable<Fotos>{
