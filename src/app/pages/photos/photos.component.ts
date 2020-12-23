@@ -8,24 +8,24 @@ import { Fotos } from '../../interfaces/fotos-intercace';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit{
-  fotos: Fotos[];
-  Fotos: any;
+  fotos: Fotos;
   
 
   constructor(private servicioPruebaServicio: ServicioPruebaService) { 
  }
   
   ngOnInit(): void {
-    this.Fotos();
+    this.Albums();
 
    console.log(this.fotos);
   }
 
 
   Albums(){
-  this.servicioPruebaServicio.getAlbums().subscribe(Fotos=> {
+  this.servicioPruebaServicio.getFotos().subscribe(Fotos=> {
   console.log(Fotos);
-  this.fotos = Fotos as Fotos[]
+  this.fotos = Fotos;
+  console.log(this.fotos);
   });
 }
 
