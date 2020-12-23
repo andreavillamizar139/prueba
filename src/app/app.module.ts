@@ -6,16 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
-import { AlmbumsComponent } from './pages/almbums/almbums.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { AlbumsComponent } from './pages/albums/albums.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     UsuariosComponent,
-    AlmbumsComponent,
-    PostsComponent
+    PostsComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,
