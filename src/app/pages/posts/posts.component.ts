@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 
 @Component({
   selector: 'app-posts',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
-  constructor() { }
+  constructor( private servicioPruebaService:ServicioPruebaService, private activatedRoute:ActivatedRoute) {
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params['id']);
+    })
+    this.VerPublicaciones();
+   }
 
   ngOnInit(): void {
+  }
+
+  VerPublicaciones(){
+    this.servicioPruebaService.getPublicaciones()
+    .subscribe(resp=>{
+      //console.log(resp);
+    })
   }
 
 }
