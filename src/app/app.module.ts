@@ -10,6 +10,7 @@ import { PostsComponent } from './pages/posts/posts.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
 import { RouterModule } from '@angular/router';
 import { PhotosComponent } from './pages/photos/photos.component';
+import { ComentariosComponent } from './pages/comentarios/comentarios.component';
 
 
 
@@ -20,7 +21,8 @@ import { PhotosComponent } from './pages/photos/photos.component';
     UsuariosComponent,
     PostsComponent,
     AlbumsComponent,
-    PhotosComponent
+    PhotosComponent,
+    ComentariosComponent
   ],
   imports: [
     BrowserModule,

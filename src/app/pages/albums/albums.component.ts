@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from 'src/app/interfaces/albums-interface';
 import { ServicioPruebaService } from '../../services/servicio-prueba.service';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-albums',
@@ -28,7 +28,7 @@ export class AlbumsComponent implements OnInit{
   Albums(){
   this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
   console.log(albums);
-  this.albums = albums as unknown as Album[]
+  this.albums = albums as unknown as Album[];
   });
 }
 

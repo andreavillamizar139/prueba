@@ -1,1 +1,14 @@
-<p>posts works!</p>
+<div class="container">
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h2 class="border-bottom pb-2 mb-0">Post</h2>
+        <div class="d-flex text-muted pt-3" *ngFor="let publicacion of publicacionesDe; let i = index">
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
+                    <strong class="text-gray-dark">{{publicacion.title}}</strong>
+                    <a class="btn btn-outline-secondary" (click)="verComentarios(i+1)">Comentarios</a>
+                </div>
+                <span class="d-block">{{publicacion.body}}</span>
+            </div>
+        </div>
+    </div>
+</div>
