@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AppRoutingModule } from './app-routing.module';
+import { APP_ROUTES } from './app-routing.module';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
@@ -22,7 +22,8 @@ import { AlbumsComponent } from './pages/albums/albums.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    //AppRoutingModule
+    APP_ROUTES
     
   ],
   providers: [

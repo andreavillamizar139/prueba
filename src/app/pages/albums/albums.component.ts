@@ -1,4 +1,5 @@
 import { Component,  } from '@angular/core';
+import { Albums } from 'src/app/interfaces/albums-interface';
 import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 
 
@@ -9,9 +10,9 @@ import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 })
 export class AlbumsComponent {
 
-albums: string
-
-  constructor(private servicioPruebaServicio: ServicioPruebaService) { }
+  constructor(private servicioPruebaServicio: ServicioPruebaService) { 
+    this.getAlbums();
+  }
   
   getAlbums(){
   this.servicioPruebaServicio.getAlbums().subscribe(albums => {
