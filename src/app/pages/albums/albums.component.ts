@@ -1,5 +1,5 @@
-import { Component,  } from '@angular/core';
-import { Albums } from 'src/app/interfaces/albums-interface';
+import { Component, OnInit } from '@angular/core';
+import { Album } from 'src/app/interfaces/albums-interface';
 import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 
 
@@ -8,15 +8,24 @@ import { ServicioPruebaService } from '../../services/servicio-prueba.service';
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css']
 })
-export class AlbumsComponent {
+export class AlbumsComponent implements OnInit{
+  albums: Album[];
 
   constructor(private servicioPruebaServicio: ServicioPruebaService) { 
-    this.Albums();
+    
   }
   
+  ngOnInit(): void {
+    this.Albums();
+
+  // console.log(this.albums);
+  }
+
+
   Albums(){
   this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
-    console.log(albums);
+  //console.log(albums);
+  this.albums = albums as Album[]
   });
 }
 

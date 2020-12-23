@@ -5,12 +5,14 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { AppComponent } from './app.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { PhotosComponent } from './pages/photos/photos.component';
 
 
 const routes: Routes = [
 {path: 'usuarios',component: UsuariosComponent},
 {path: 'albums',component: AlbumsComponent},
 {path: 'post',component: PostsComponent},
+{path: 'photos',component: PhotosComponent},
 {path: '', pathMatch:"full", redirectTo:'usuarios'},
 {path: '**', pathMatch:"full", redirectTo:'usuarios'}
 ];
