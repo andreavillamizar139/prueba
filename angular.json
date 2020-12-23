@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "proyectoPruebaTecnica"
+  "defaultProject": "proyectoPruebaTecnica",
+  "cli": {
+    "analytics": false
+  }
 }
