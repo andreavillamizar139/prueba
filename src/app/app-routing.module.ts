@@ -11,6 +11,7 @@ const routes: Routes = [
 {path: 'usuarios',component: UsuariosComponent},
 {path: 'albums',component: AlbumsComponent},
 {path: 'post',component: PostsComponent},
+{ path: 'post/:id', component: PostsComponent},
 {path: '', pathMatch:"full", redirectTo:'usuarios'},
 {path: '**', pathMatch:"full", redirectTo:'usuarios'}
 ];

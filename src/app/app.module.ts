@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { PhotosComponent } from './pages/photos/photos.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

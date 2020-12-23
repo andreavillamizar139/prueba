@@ -1,1 +1,28 @@
-<p>usuarios works!</p>
+<div class="container">
+
+    <h2>Usuarios</h2>
+    <hr>
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col" *ngFor="let usuario of usuarios; let i = index">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder:" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></svg>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <strong>{{usuario.username}}</strong><br> {{usuario.name}} <br> {{usuario.email}} <br> {{usuario.phone}} <br> {{usuario.website}}
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" (click)="verPublicaciones(i+1)" class="btn btn-sm btn-outline-secondary">Publicaciones</button>
+                                    <button type="button" (click)="verAlbum(i+1)" class="btn btn-sm btn-outline-secondary">Albumes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
