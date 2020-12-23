@@ -9,9 +9,9 @@ import { ServicioPruebaService } from './services/servicio-prueba.service';
 export class AppComponent {
   title = 'proyectoPruebaTecnica';
   constructor( private servicioPruebaServicio:ServicioPruebaService){
-    this.servicioPruebaServicio.getUsuarios()
-    .subscribe(resp=>{
-      console.log(resp);
-    })
+    // this.servicioPruebaServicio.getUsuarios()
+    // .subscribe(resp=>{
+    //   console.log(resp);
+    // })
   }
 }

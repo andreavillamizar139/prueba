@@ -9,13 +9,14 @@ import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 })
 export class AlbumsComponent {
 
-  constructor(private servicioPruebaServicio: ServicioPruebaService) { }
+albums: string
 
-getAlbums(){
+  constructor(private servicioPruebaServicio: ServicioPruebaService) { }
+  
+  getAlbums(){
   this.servicioPruebaServicio.getAlbums().subscribe(albums => {
     console.log(albums);
   })
 }
-
 
 }
