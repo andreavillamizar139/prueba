@@ -9,6 +9,8 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  } from '@angular/core';
+import { ServicioPruebaService } from '../../services/servicio-prueba.service';
+
 
 @Component({
   selector: 'app-albums',
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css']
 })
-export class AlbumsComponent implements OnInit {
+export class AlbumsComponent {
 
-  constructor() { }
+  constructor(private servicioPruebaServicio: ServicioPruebaService) { }
 
-  ngOnInit(): void {
-  }
+getAlbums(){
+  this.servicioPruebaServicio.getAlbums().subscribe(albums => {
+    console.log(albums);
+  })
+}
+
 
 }
