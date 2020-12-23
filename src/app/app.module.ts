@@ -8,7 +8,8 @@ import { APP_ROUTES } from './app-routing.module';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { PostsComponent } from './pages/posts/posts.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
-
+import { RouterModule } from '@angular/router';
+import { PhotosComponent } from './pages/photos/photos.component';
 
 
 @NgModule({
@@ -17,12 +18,12 @@ import { AlbumsComponent } from './pages/albums/albums.component';
     NavbarComponent,
     UsuariosComponent,
     PostsComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    //AppRoutingModule
     APP_ROUTES
     
   ],

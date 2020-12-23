@@ -11,13 +11,13 @@ import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 export class AlbumsComponent {
 
   constructor(private servicioPruebaServicio: ServicioPruebaService) { 
-    this.getAlbums();
+    this.Albums();
   }
   
-  getAlbums(){
-  this.servicioPruebaServicio.getAlbums().subscribe(albums => {
+  Albums(){
+  this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
     console.log(albums);
-  })
+  });
 }
 
 }
