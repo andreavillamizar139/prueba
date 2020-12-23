@@ -13,8 +13,11 @@ albums: string
 
   constructor(private servicioPruebaServicio: ServicioPruebaService) { }
   
-  getAlbums(){
-  this.servicioPruebaServicio.getAlbums().subscribe(albums => {
+  Albums(){
+  this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
+    console.log(albums);
+  })
+  this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
     console.log(albums);
   })
 }
