@@ -24,7 +24,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   verAlbum(index:number){
-    console.log(index);
+    this.router.navigate(['/albums',index]);
   }
 
   verPublicaciones(index:number){

@@ -13,11 +13,13 @@ import { ComentariosComponent } from './pages/comentarios/comentarios.component'
 const routes: Routes = [
 {path: 'usuarios',component: UsuariosComponent},
 {path: 'albums',component: AlbumsComponent},
+{path: 'albums/:id',component: AlbumsComponent},
 {path: 'post',component: PostsComponent},
 { path: 'post/:id', component: PostsComponent},
 {path: 'comentarios',component: ComentariosComponent},
 { path: 'comentarios/:id', component: ComentariosComponent},
 {path: 'fotos',component: PhotosComponent},
+{path: 'fotos/:id',component: PhotosComponent},
 {path: '', pathMatch:"full", redirectTo:'usuarios'},
 {path: '**', pathMatch:"full", redirectTo:'usuarios'}
 ];

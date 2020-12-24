@@ -30,9 +30,8 @@ export class PhotosComponent implements OnInit{
     this.servicioPruebaService.getFotos()
     .subscribe(resp =>{
       this.fotos = resp as unknown as Fotos[];
-      // console.log(this.comentarios);
       for(const index in this.fotos){
-        if(this.fotos[index].postId === this.index){
+        if(this.fotos[index].albumId === this.index){
           this.fotosDe.push(this.fotos[index]);
         }
       }

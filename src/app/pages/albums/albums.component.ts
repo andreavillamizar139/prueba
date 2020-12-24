@@ -30,7 +30,7 @@ export class AlbumsComponent implements OnInit{
   VerAlbums(){
   this.servicioPruebaServicio.getAlbums().subscribe(resp=> {
     this.albums = resp as unknown as Album[];
-    console.log(resp);
+    //console.log(this.albums);
     for(const index in this.albums){
       if(this.albums[index].userId === this.index){
         this.albumsDe.push(this.albums[index]);
@@ -39,8 +39,9 @@ export class AlbumsComponent implements OnInit{
  })
 }
 
+
 verFotos(index:number){
-  this.router.navigate(['/fotos',index])
+  this.router.navigate(['/fotos',index]);
 }
 
 }

@@ -1,12 +1,16 @@
-<div class="card mb-3" style="max-width: 540px;" *ngFor="let foto of fotosDe; let i =index">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <img class="img-fluid" src="{{foto.url}}">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">{{foto.id}}</h5>
-                <p class="card-text">{{foto.title}}</p>
+<div class="container">
+    <button type="button" class="btn btn-outline-secondary" (click)="paginaAnterior()">Devolver</button>
+    <br>
+    <div class="m-3 card mb-2" style="max-width: 540px;" *ngFor="let foto of fotosDe; let i =index">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img class="img-fluid" src="{{foto.url}}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{foto.id}}</h5>
+                    <p class="card-text">{{foto.title}}</p>
+                </div>
             </div>
         </div>
     </div>
