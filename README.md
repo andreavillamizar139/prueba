@@ -42,4 +42,5 @@ De igual manera, se llevó a cabo un acompañamiento y respaldo mutuo ante la pr
 2. Por medio de la terminal nos posicionamos en esta carpeta "cd ..."
 3. En la terminal "git init "
 4. "git clone https://github.com/andreavillamizar139/prueba.git"
-5. Una vez clonada la aplicación inicializar el proyecto "ng serve"
+5. "npm install" para los modulos de node
+6. Una vez clonada la aplicación inicializar el proyecto "ng serve"
