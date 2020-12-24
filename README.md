@@ -2,17 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
-##API aplicada al proyecto
+## API aplicada al proyecto
 La API que alimenta esta aplicación web cuenta con distinta información, entre ella un conjunto de usuarios de los cuales de manera relacional se conectan con unas publicaciones y estas publicaciones se relacionan con comentarios. De igual manera, el usuario se relaciona con información de albumes los cuales estan relacionados con fotos.
 
 
-##Aplicación web
+## Aplicación web
 Se creó una aplicación web en la cual de manera inicial se muestran todos los usuarios disponibles, cada card tiene acceso directo a las publicaciónes y albumes hechas por el respectivo usuario. Al ver la lista de publicaciones se pueden consultar los comentarios de cada una de ellas. Adicional a esto, al entrar a los albumes se tiene acceso a las fotos pertenecientes a él.
 
 Se implemento Angular 11(interfaces, componentes, servicios, entre otras herramientas del mismo), bootstrap y la API proporcionando la información.
 
 
-##Estructura del proyecto
+## Estructura del proyecto
 Las carpetas principales dentro de la app
 - components (navbar)
 - interfaces (álbum, comentario, foto, publicación, usuario)
@@ -21,7 +21,7 @@ Las carpetas principales dentro de la app
 Páginas de app-routing.module.ts, index.html, app.module.ts y demás archivos necesarios
 
 
-##Trabajo en equipo
+## Trabajo en equipo
 En cuanto a las tareas, se llevó a cabo una distribución de la siguiente manera:
 Manuel encargado de:
 - Navbar y rutas principales
