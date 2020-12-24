@@ -32,7 +32,7 @@ export class PostsComponent implements OnInit {
     this.servicioPruebaService.getPublicaciones()
     .subscribe(resp=>{
       this.publicaciones = resp as unknown as Publicaciones[];
-      //console.log(this.publicaciones);
+      console.log(this.publicaciones);
       for(const index in this.publicaciones){
         if(this.publicaciones[index].userId === this.index){
           this.publicacionesDe.push(this.publicaciones[index]);

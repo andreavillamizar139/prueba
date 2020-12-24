@@ -1,10 +1,10 @@
-<div class="container" class="card" *ngFor="let album of albums">
+<div class="container" class="card" *ngFor="let album of albums; let i = index">
     <h5 class="card-header">{{album.id}}</h5>
     <div class="card-body">
       <h5 class="card-title" class="text-center">{{album.title}}</h5>
       <p class="card-text"></p>
       <div class="d-grid gap-2">
-        <button class="btn btn-primary">Ver Fotos</button>
+        <button class="btn btn-primary" (click)="verFotos(i+1)">Ver Fotos</button>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from 'src/app/interfaces/albums-interface';
 import { ServicioPruebaService } from '../../services/servicio-prueba.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -10,28 +11,36 @@ import { ServicioPruebaService } from '../../services/servicio-prueba.service';
 })
 export class AlbumsComponent implements OnInit{
   albums: Album[];
-  router: any;
+  albumsDe: Album[]=[];
   navigate: any;
+  index: number;
+  indexString: string;
 
-
-  constructor(private servicioPruebaServicio: ServicioPruebaService) { 
-    
+  constructor(private servicioPruebaServicio: ServicioPruebaService, private activatedRoute:ActivatedRoute,  private router:Router) { 
+    this.activatedRoute.params.subscribe(params => {
+      this.indexString=params['id'];
+    })
+    this.index = parseInt(this.indexString);
+    this.VerAlbums();
   }
   
-  ngOnInit(): void {
-    this.Albums();
-
-   console.log(this.albums);
-  }
+  ngOnInit(): void { }
 
 
-  Albums(){
-  this.servicioPruebaServicio.getAlbums().subscribe(albums=> {
-  console.log(albums);
-  this.albums = albums as unknown as Album[];
-  });
+  VerAlbums(){
+  this.servicioPruebaServicio.getAlbums().subscribe(resp=> {
+    this.albums = resp as unknown as Album[];
+    console.log(resp);
+    for(const index in this.albums){
+      if(this.albums[index].userId === this.index){
+        this.albumsDe.push(this.albums[index]);
+      } 
+   }
+ })
 }
 
-
+verFotos(index:number){
+  this.router.navigate(['/fotos',index])
+}
 
 }
