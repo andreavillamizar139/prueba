@@ -2,26 +2,44 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
-## Development server
+## API aplicada al proyecto
+La API que alimenta esta aplicación web cuenta con distinta información, entre ella un conjunto de usuarios de los cuales de manera relacional se conectan con unas publicaciones y estas publicaciones se relacionan con comentarios. De igual manera, el usuario se relaciona con información de albumes los cuales estan relacionados con fotos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Aplicación web
+Se creó una aplicación web en la cual de manera inicial se muestran todos los usuarios disponibles, cada card tiene acceso directo a las publicaciónes y albumes hechas por el respectivo usuario. Al ver la lista de publicaciones se pueden consultar los comentarios de cada una de ellas. Adicional a esto, al entrar a los albumes se tiene acceso a las fotos pertenecientes a él.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Se implemento Angular 11(interfaces, componentes, servicios, entre otras herramientas del mismo), bootstrap y la API proporcionando la información.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Estructura del proyecto
+Las carpetas principales dentro de la app
+- components (navbar)
+- interfaces (álbum, comentario, foto, publicación, usuario)
+- pages (albums, comentarios, photos, post, usuarios)
+- services (servicio de prueba técnica)
+Páginas de app-routing.module.ts, index.html, app.module.ts y demás archivos necesarios
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Trabajo en equipo
+En cuanto a las tareas, se llevó a cabo una distribución de la siguiente manera:
 
-## Running end-to-end tests
+Manuel encargado de:
+- Navbar y rutas principales
+- Despliegue de albumes por usuario
+- Despliegue de fotos por albumes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Andrea encargada de:
+- Implementacion de servicio y despliegue de usuarios
+- Despliegue de publicaciones por usuario
+- Despliegue de comentarios por publicación 
 
-## Further help
+De igual manera, se llevó a cabo un acompañamiento y respaldo mutuo ante la prueba establecida.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Pasos para clonar y observar el proyecto
+1. Crear la carpeta donde se almacenará el repositorio de manera local
+2. Por medio de la terminal nos posicionamos en esta carpeta "cd ..."
+3. En la terminal "git init "
+4. "git clone https://github.com/andreavillamizar139/prueba.git"
+5. Una vez clonada la aplicación inicializar el proyecto "ng serve"
