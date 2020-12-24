@@ -23,6 +23,7 @@ Páginas de app-routing.module.ts, index.html, app.module.ts y demás archivos n
 
 ## Trabajo en equipo
 En cuanto a las tareas, se llevó a cabo una distribución de la siguiente manera:
+
 Manuel encargado de:
 - Navbar y rutas principales
 - Despliegue de albumes por usuario
